@@ -9,13 +9,14 @@ import UIKit
 
 class ToDoListController: UIViewController {
     @IBOutlet weak var tableview: UITableView!
-    var mockToDo = [Todo()]
+    var mockToDo = [Todo]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableview.delegate = self
         tableview.dataSource = self
         tableview.estimatedRowHeight = 44
+        mockData()
     }
     
     func mockData(){
