@@ -18,14 +18,14 @@ class ToDoTableCell: UITableViewCell{
                 if todo.completed == false{
                     taskNameLabel.text = todo.name
                     taskDueDate.text = String(format: "Due on %@",
-                                             todo.dueDate!.toString(format: "MM YY DD"))
+                                             todo.dueDate!.toString(format: "MM dd yyyy"))
                     taskCompleteDate.text = "To be completed"
                 }else{
                     taskNameLabel.text = todo.name
                     taskDueDate.text = String(format: "Due on %@",
-                                              todo.dueDate!.toString(format: "MM YY DD"))
+                                              todo.dueDate!.toString(format: "MM dd yyyy"))
                     taskCompleteDate.text = String(format:"Completed on %@",
-                                                   todo.dueDate!.toString(format: "MM YY DD"))
+                                                   todo.dueDate!.toString(format: "MM dd yyyy"))
                 }
             }
         }
