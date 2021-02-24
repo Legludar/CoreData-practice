@@ -12,6 +12,7 @@
 		D7535D6825E6862F002D7CBC /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7535D6725E6862F002D7CBC /* CoreDataManager.swift */; };
 		D7535D6B25E69BE4002D7CBC /* AddNewTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7535D6A25E69BE4002D7CBC /* AddNewTaskViewController.swift */; };
 		D7535D7025E69FC4002D7CBC /* AddNewTaskViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7535D6F25E69FC4002D7CBC /* AddNewTaskViewModel.swift */; };
+		D7535D7625E6B833002D7CBC /* TodoListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7535D7525E6B833002D7CBC /* TodoListViewModel.swift */; };
 		D7D103AE25E53F9E0079783D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D103AD25E53F9E0079783D /* AppDelegate.swift */; };
 		D7D103B025E53F9E0079783D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D103AF25E53F9E0079783D /* SceneDelegate.swift */; };
 		D7D103B225E53F9E0079783D /* ToDoListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D103B125E53F9E0079783D /* ToDoListController.swift */; };
@@ -29,6 +30,7 @@
 		D7535D6725E6862F002D7CBC /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		D7535D6A25E69BE4002D7CBC /* AddNewTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewTaskViewController.swift; sourceTree = "<group>"; };
 		D7535D6F25E69FC4002D7CBC /* AddNewTaskViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewTaskViewModel.swift; sourceTree = "<group>"; };
+		D7535D7525E6B833002D7CBC /* TodoListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListViewModel.swift; sourceTree = "<group>"; };
 		D7D103AA25E53F9E0079783D /* CoreDataPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreDataPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7D103AD25E53F9E0079783D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D7D103AF25E53F9E0079783D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +71,17 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		D7535D7325E6AF8F002D7CBC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D7D103B125E53F9E0079783D /* ToDoListController.swift */,
+				D736824B25E55C280056E5C6 /* ToDoTableCell.swift */,
+				D7535D6A25E69BE4002D7CBC /* AddNewTaskViewController.swift */,
+				D7535D6F25E69FC4002D7CBC /* AddNewTaskViewModel.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		D7D103A125E53F9E0079783D = {
 			isa = PBXGroup;
 			children = (
@@ -90,10 +103,7 @@
 			children = (
 				D736824F25E571020056E5C6 /* Extensions */,
 				D7D103CA25E543950079783D /* Model */,
-				D7D103B125E53F9E0079783D /* ToDoListController.swift */,
-				D736824B25E55C280056E5C6 /* ToDoTableCell.swift */,
-				D7535D6A25E69BE4002D7CBC /* AddNewTaskViewController.swift */,
-				D7535D6F25E69FC4002D7CBC /* AddNewTaskViewModel.swift */,
+				D7535D7325E6AF8F002D7CBC /* Controller */,
 				D7535D6D25E69D4C002D7CBC /* View */,
 				D7D103B925E53F9F0079783D /* Assets.xcassets */,
 				D7D103BB25E53F9F0079783D /* LaunchScreen.storyboard */,
@@ -102,6 +112,7 @@
 				D7D103AD25E53F9E0079783D /* AppDelegate.swift */,
 				D7D103B625E53F9E0079783D /* CoreDataPractice.xcdatamodeld */,
 				D7535D6725E6862F002D7CBC /* CoreDataManager.swift */,
+				D7535D7525E6B833002D7CBC /* TodoListViewModel.swift */,
 			);
 			path = CoreDataPractice;
 			sourceTree = "<group>";
@@ -189,6 +200,7 @@
 				D7535D7025E69FC4002D7CBC /* AddNewTaskViewModel.swift in Sources */,
 				D7D103B225E53F9E0079783D /* ToDoListController.swift in Sources */,
 				D736825125E571570056E5C6 /* Date+Extentions.swift in Sources */,
+				D7535D7625E6B833002D7CBC /* TodoListViewModel.swift in Sources */,
 				D7D103AE25E53F9E0079783D /* AppDelegate.swift in Sources */,
 				D7D103B025E53F9E0079783D /* SceneDelegate.swift in Sources */,
 				D7D103C725E5436E0079783D /* Todo+CoreDataClass.swift in Sources */,

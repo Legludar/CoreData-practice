@@ -13,6 +13,17 @@ class CoreDataManager{
     
     private init() {}
     
+    func getAlltodos() -> [Todo] {
+        let request: NSFetchRequest<Todo> = Todo.fetchRequest()
+            var todos = [Todo]()
+            do {
+                todos = try persistentContainer.viewContext.fetch(request)
+            } catch let err {
+                print(err.localizedDescription)
+            }
+            return todos
+        }
+    
     func saveTodo(name: String, dueDate: Date, completion: @escaping(Bool) -> Void){
         let todo = Todo(context: persistentContainer.viewContext)
         todo.name = name
