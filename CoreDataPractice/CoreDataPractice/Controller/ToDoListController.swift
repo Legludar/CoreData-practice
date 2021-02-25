@@ -40,6 +40,20 @@ extension ToDoListController: UITableViewDelegate, UITableViewDataSource{
         cell.todo = vm.todoAtIndex(indexPath.row)
         return cell
     }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let todo = vm.todoAtIndex(indexPath.row)
+        tableview.deselectRow(at: indexPath, animated: true)
+        if todo.completed == false{
+            let alertController = UIAlertController(title: "Completed?", message: "Mark this task as completed?", preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "YES", style: .default, handler: {(_) in vm.completeTaskAtIndex(indexPath.row){
+                (_) in self.tableview.reloadData()
+            }
+            
+            }))
+            alertController.addAction(UIAlertAction(title: "NO", style: .default, handler: nil))
+        }
+        
+    }
     
     
 }

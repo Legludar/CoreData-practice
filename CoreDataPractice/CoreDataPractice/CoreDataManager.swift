@@ -13,8 +13,30 @@ class CoreDataManager{
     
     private init() {}
     
+    func completeTask(todo t: Todo, completion: @escaping(Bool) -> Void){
+        let request: NSFetchRequest <Todo> = Todo.fetchRequest()
+        request.predicate = NSPredicate(format: "id = %@", t.id!.uuidString)
+        do{
+            let result = try
+                persistentContainer.viewContext.fetch(request)
+            if result.count > 0{
+                let todo = result.first!
+                todo.completed = true
+                todo.completedDate = Date()
+                saveContext()
+                completion(true)
+            }
+        }catch let err{
+            print(err.localizedDescription)
+        }
+    }
+    
     func getAlltodos() -> [Todo] {
         let request: NSFetchRequest<Todo> = Todo.fetchRequest()
+        let firstSort = NSSortDescriptor(key: #keyPath(Todo.dueDate), ascending: true)
+        let secondSort = NSSortDescriptor(key: #keyPath(Todo.completed), ascending: true)
+        let thirdSort = NSSortDescriptor(key: #keyPath(Todo.completedDate), ascending: true)
+        request.sortDescriptors = [firstSort, secondSort, thirdSort]
             var todos = [Todo]()
             do {
                 todos = try persistentContainer.viewContext.fetch(request)
