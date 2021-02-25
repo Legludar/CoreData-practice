@@ -13,6 +13,22 @@ class CoreDataManager{
     
     private init() {}
     
+    func deleteTask(todo t: Todo, completion: @escaping(Bool) -> Void){
+        let request: NSFetchRequest <Todo> = Todo.fetchRequest()
+        request.predicate = NSPredicate(format: "id = %@", t.id!.uuidString)
+        do{
+            let result = try
+                persistentContainer.viewContext.fetch(request)
+            if result.count > 0{
+                let todo = result.first!
+                persistentContainer.viewContext.delete(todo)
+                completion(true)
+            }
+        }catch let err{
+            print(err.localizedDescription)
+        }
+    }
+    
     func completeTask(todo t: Todo, completion: @escaping(Bool) -> Void){
         let request: NSFetchRequest <Todo> = Todo.fetchRequest()
         request.predicate = NSPredicate(format: "id = %@", t.id!.uuidString)

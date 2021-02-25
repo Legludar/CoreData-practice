@@ -51,10 +51,18 @@ extension ToDoListController: UITableViewDelegate, UITableViewDataSource{
             
             }))
             alertController.addAction(UIAlertAction(title: "NO", style: .default, handler: nil))
+            present(alertController, animated: true)
         }
         
     }
     
-    
-}
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+            if editingStyle == .delete {
+                vm.deleteTask(indexPath.row) { (_) in
+                    tableView.deleteRows(at: [indexPath], with: .automatic)
+                }
+            }
+        }
+    }
+
 
