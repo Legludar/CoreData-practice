@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D723A28225E92DC00090D741 /* NavBarHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D723A28125E92DC00090D741 /* NavBarHelper.swift */; };
 		D736824C25E55C280056E5C6 /* ToDoTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D736824B25E55C280056E5C6 /* ToDoTableCell.swift */; };
 		D736825125E571570056E5C6 /* Date+Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D736825025E571570056E5C6 /* Date+Extentions.swift */; };
 		D7535D6825E6862F002D7CBC /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7535D6725E6862F002D7CBC /* CoreDataManager.swift */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D723A28125E92DC00090D741 /* NavBarHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBarHelper.swift; sourceTree = "<group>"; };
 		D736824B25E55C280056E5C6 /* ToDoTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoTableCell.swift; sourceTree = "<group>"; };
 		D736825025E571570056E5C6 /* Date+Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extentions.swift"; sourceTree = "<group>"; };
 		D7535D6725E6862F002D7CBC /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 				D7535D6725E6862F002D7CBC /* CoreDataManager.swift */,
 				D7535D7525E6B833002D7CBC /* TodoListViewModel.swift */,
 				D7CD3BDE25E7EAA4000C58DF /* String+Extension.swift */,
+				D723A28125E92DC00090D741 /* NavBarHelper.swift */,
 			);
 			path = CoreDataPractice;
 			sourceTree = "<group>";
@@ -200,6 +203,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D736824C25E55C280056E5C6 /* ToDoTableCell.swift in Sources */,
+				D723A28225E92DC00090D741 /* NavBarHelper.swift in Sources */,
 				D7535D7025E69FC4002D7CBC /* AddNewTaskViewModel.swift in Sources */,
 				D7D103B225E53F9E0079783D /* ToDoListController.swift in Sources */,
 				D736825125E571570056E5C6 /* Date+Extentions.swift in Sources */,
